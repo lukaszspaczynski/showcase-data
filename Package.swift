@@ -38,7 +38,12 @@ let package = Package(
         .target(
             name: "ShowcaseDataMocks",
             dependencies: [
-                .target(name: "ShowcaseData")
+                .target(name: "ShowcaseData"),
+                .product(name: "RxSwift", package: "RxSwift"),
+                .product(name: "RxCocoa", package: "RxSwift"),
+                "ShowcaseExtensions",
+                "RxSwiftExt",
+                "Kanna"
             ],
             resources: [
                 .copy("Resources/HTMLs/BioResponseValid.html"),
