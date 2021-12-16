@@ -38,12 +38,8 @@ let package = Package(
         .target(
             name: "ShowcaseDataMocks",
             dependencies: [
-                .target(name: "ShowcaseData"),
-                .product(name: "RxSwift", package: "RxSwift"),
-                .product(name: "RxCocoa", package: "RxSwift"),
-                "ShowcaseExtensions",
-                "RxSwiftExt",
-                "Kanna"],
+                .target(name: "ShowcaseData")
+            ],
             resources: [
                 .copy("Resources/HTMLs/BioResponseValid.html"),
                 .copy("Resources/Images/mocked-image.jpeg"),
@@ -57,13 +53,8 @@ let package = Package(
             dependencies: [
                 .target(name: "ShowcaseData"),
                 .target(name: "ShowcaseDataMocks"),
-                .product(name: "RxSwift", package: "RxSwift"),
-                .product(name: "RxCocoa", package: "RxSwift"),
                 .product(name: "RxBlocking", package: "RxSwift"),
                 .product(name: "RxTest", package: "RxSwift"),
-                "ShowcaseExtensions",
-                "RxSwiftExt",
-                "Kanna",
                 "Nimble",
                 "SnapshotTesting"],
             exclude: [
